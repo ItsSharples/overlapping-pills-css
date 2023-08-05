@@ -17,9 +17,10 @@ pillgroup pill {
     width: fit-content;
     height: fit-content;
 
-    padding-inline-start: 1em;
+    --padding-left: 0.2em;
+    padding-inline-start: calc(1em + var(--padding-left, 0));
 }
-pill::before{
+pillgroup pill::before {
     position: absolute;
     content: "";
     z-index: -1;
@@ -28,7 +29,7 @@ pill::before{
     height: 100%;
     background-color: var(--pill-type-colour, var(--default-colour));
 }
-pill::after{
+pillgroup pill::after {
     position: absolute;
     content: "";
     background-color: var(--pill-type-colour, var(--default-colour));
