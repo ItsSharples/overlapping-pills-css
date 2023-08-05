@@ -18,7 +18,7 @@ pillgroup pill {
     height: fit-content;
 
     --padding-left: 0.2em;
-    padding-inline-start: calc(1em + var(--padding-left, 0));
+    padding-inline-start: calc(1em + var(--padding-left, 0em));
 }
 pillgroup pill::before {
     position: absolute;
