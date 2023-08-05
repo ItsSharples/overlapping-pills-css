@@ -1,0 +1,61 @@
+
+
+pillgroup {
+    margin: 0;
+    padding: 0;
+    margin-left: 1em;
+    --default-colour: #66CCFF;
+
+}
+
+
+pillgroup pill { 
+    padding: 0;
+    margin: 0;
+    position: relative;
+
+    width: fit-content;
+    height: fit-content;
+
+    padding-inline-start: 1em;
+}
+pill::before{
+    position: absolute;
+    content: "";
+    z-index: -1;
+    left: 8%;
+    width: 115%;
+    height: 100%;
+    background-color: var(--pill-type-colour, var(--default-colour));
+}
+pill::after{
+    position: absolute;
+    content: "";
+    background-color: var(--pill-type-colour, var(--default-colour));
+    height: 100%;
+    width: auto;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
+pill[type='variable']{
+    --pill-type-colour:#FFCC33;
+}
+pill[type='layout']{
+    --pill-type-colour:#66CCFF;
+}
+pill[type='schema']{
+    --pill-type-colour:#66CC66;
+}
+pill[type='comment']{
+    --pill-type-colour:#FF9900;
+}
+pill[type='text']{
+    --pill-type-colour:#FFFFFF;
+}
+pill[type='flavour']{
+    --pill-type-colour:#CCCCCC;
+}
+pill[type='group']{
+    --pill-type-colour:#33CCCC;
+}
